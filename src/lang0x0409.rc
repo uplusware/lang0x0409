@@ -1,0 +1,534 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BG_BLUE             BITMAP                  "res\\bg_blue.bmp"
+
+IDB_BG_GRAY             BITMAP                  "res\\bg_gray.bmp"
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_BG_GREEN            BITMAP                  "res\\bg_green.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 32, 32
+BEGIN
+    BUTTON      ID_SERVICE_START
+    BUTTON      ID_SERVICE_STOP
+    SEPARATOR
+    BUTTON      ID_NT_SERVICE_MODE
+    SEPARATOR
+    BUTTON      ID_BASIC_SETTING
+    SEPARATOR
+    BUTTON      ID_ADMIN_ACCOUNTID
+    SEPARATOR
+    BUTTON      ID_ADMIN_POLICY
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_APP_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Service"
+    BEGIN
+        MENUITEM "&Start",                      ID_SERVICE_START
+        MENUITEM "S&top",                       ID_SERVICE_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "&NT Service Mode",            ID_NT_SERVICE_MODE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Settings"
+    BEGIN
+        MENUITEM "&Basic",                      ID_BASIC_SETTING
+        MENUITEM SEPARATOR
+        MENUITEM "&ID",                         ID_ADMIN_ACCOUNTID
+        MENUITEM "&Policy",                     ID_ADMIN_POLICY
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ftpadmingui.ico"
+
+IDI_SETTING             ICON                    "res\\setting.ico"
+
+IDI_USER                ICON                    "res\\user.ico"
+
+IDI_POLICY              ICON                    "res\\policy.ico"
+
+IDI_STARTFLAG0          ICON                    "res\\green.ico"
+
+IDI_STOPFLAG            ICON                    "res\\red.ico"
+
+IDI_IDLEFLAG            ICON                    "res\\yellow.ico"
+
+IDI_DISABLED_USER       ICON                    "res\\disabled_user.ico"
+
+IDI_ENABLED_USER        ICON                    "res\\enabled_user.ico"
+
+IDI_CREATE_USER         ICON                    "res\\add_user.ico"
+
+IDI_REMOVE_USER         ICON                    "res\\remove_user.ico"
+
+IDI_MODIFY_USER         ICON                    "res\\edit_user.ico"
+
+IDI_FIND                ICON                    "res\\find.ico"
+
+IDI_IP_REMOVE           ICON                    "res\\ip_remove.ico"
+
+IDI_IP_APPEND           ICON                    "res\\ip_add.ico"
+
+IDI_APPLY               ICON                    "res\\apply.ico"
+
+IDI_CANCEL              ICON                    "res\\cancel.ico"
+
+IDI_OK                  ICON                    "res\\ok.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 295, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,122,63,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Copyright (C) uplusware 2022",IDC_STATIC,38,19,131,8
+    LTEXT           "Support: uplusware@gmail.com",IDC_STATIC,38,31,120,8
+    PUSHBUTTON      "http://uplusware.net",IDC_HOMEPAGE1,72,41,69,14
+    LTEXT           "Website:",IDC_STATIC,38,42,29,8
+    LTEXT           "UplusFtp Server v2.0",IDC_STATIC,38,7,112,8
+    PUSHBUTTON      "http://uplusftp.com",IDC_HOMEPAGE2,144,41,68,14
+END
+
+IDD_BASIC_SETTING_DIALOG DIALOGEX 0, 0, 214, 237
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Basic Setting"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,14,216,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,148,216,50,14
+    COMBOBOX        IDC_SERVICE_IP,13,19,150,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Bind",IDC_BIND_IP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,21,30,10
+    LTEXT           "Ftp Service:",IDC_STATIC,12,58,39,8
+    LTEXT           "Web Service:",IDC_STATIC,91,58,44,8
+    EDITTEXT        IDC_FTP_PORT,54,55,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WEB_PORT,139,55,32,14,ES_AUTOHSCROLL
+    LTEXT           "Max Paiallel Connection:",IDC_STATIC,13,85,78,8
+    EDITTEXT        IDC_MAX_NUM_SIM_CONN,93,83,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MAX_NUM_SIM_CONN_CTRL,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,119,83,13,14
+    GROUPBOX        "Welcome Message",IDC_STATIC,7,104,200,109
+    EDITTEXT        IDC_WEL_MSG,12,116,190,92,ES_MULTILINE | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Apply",ID_APPLY,81,216,50,14
+    GROUPBOX        "Port",IDC_STATIC,7,43,200,32
+    GROUPBOX        "Bind Service IP",IDC_STATIC,7,7,200,32
+    CONTROL         "PASV Mode",IDC_PASV_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,86,55,10
+END
+
+IDD_USER_ADMIN_DLG DIALOGEX 0, 0, 418, 327
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "User Administration"
+FONT 9, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_USER_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,27,418,300
+    PUSHBUTTON      "&Create",IDC_CREATE_USER,2,2,45,22
+    PUSHBUTTON      "&Modify",IDC_MODIFY_USER,49,2,45,22
+    PUSHBUTTON      "&Remove",IDC_REMOVE_USER,96,2,45,22
+END
+
+IDD_POLICY_ADMIN_DLG DIALOG 0, 0, 196, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Policy"
+FONT 9, "MS Sans Serif"
+BEGIN
+    CONTROL         "Reject",IDC_POLICY_REJECT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,7,37,10
+    CONTROL         "Permit",IDC_POLICY_PERMIT,"Button",BS_AUTORADIOBUTTON,49,7,35,10
+    LISTBOX         IDC_IP_LIST,7,37,128,149,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Remove",IDC_REMOVE_IP,139,37,50,14
+    EDITTEXT        IDC_NEW_IP,7,20,128,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "A&ppend",IDC_APPEND_IP,139,20,50,14
+    PUSHBUTTON      "&Apply",ID_APPLY,73,189,50,14
+    PUSHBUTTON      "&Ok",IDOK,14,189,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,132,189,50,14
+END
+
+IDD_USER_INFORMATION DIALOG 0, 0, 298, 251
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Information"
+FONT 9, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,91,230,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,172,230,50,14
+    LTEXT           "Username:",IDC_STATIC,13,10,35,8
+    EDITTEXT        IDC_USERNAME,51,7,56,14,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,14,26,34,8
+    EDITTEXT        IDC_USERPWD,51,24,56,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Verify:",IDC_STATIC,117,26,20,8
+    EDITTEXT        IDC_USERPWD_VF,141,24,56,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,10,44,38,8
+    EDITTEXT        IDC_USER_ALIAS,51,41,146,14,ES_AUTOHSCROLL
+    LTEXT           "Home:",IDC_STATIC,26,60,22,8
+    EDITTEXT        IDC_USER_HOME,51,58,146,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE_HOME,200,58,47,14
+    GROUPBOX        "Welcome Message",IDC_STATIC,7,80,196,146
+    GROUPBOX        "Permissions",IDC_STATIC,208,80,83,146
+    CONTROL         "List",IDC_LIST_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,93,27,10
+    CONTROL         "Create Directory",IDC_CREATE_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,108,67,10
+    CONTROL         "Remove Directory",IDC_REMOVE_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,123,73,10
+    CONTROL         "Create File",IDC_CREATE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,138,49,10
+    CONTROL         "Read File",IDC_READ_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,153,46,10
+    CONTROL         "Write File",IDC_WRITE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,168,45,10
+    CONTROL         "Remove File",IDC_DELETE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,183,55,10
+    CONTROL         "Execute",IDC_EXECUTE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,198,42,10
+    CONTROL         "Inactive Accounts",IDC_DISABLED_USER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,213,73,10
+    EDITTEXT        IDC_USER_WEL_MSG,12,90,185,131,ES_MULTILINE | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_BASIC_SETTING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_USER_ADMIN_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_POLICY_ADMIN_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_USER_INFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Uplusware"
+            VALUE "FileDescription", "UplusFtp Server"
+            VALUE "FileVersion", "2.0.0.0"
+            VALUE "InternalName", "FtpAdminGUI"
+            VALUE "LegalCopyright", "Copyright 2022"
+            VALUE "OriginalFilename", "FtpAdminGUI"
+            VALUE "ProductName", "UplusFtp Server"
+            VALUE "ProductVersion", "2.0.0.0"
+        END
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "Uplusware"
+            VALUE "FileDescription", "UplusFtp Server"
+            VALUE "FileVersion", "2.0.0.0"
+            VALUE "InternalName", "FtpAdminGUI"
+            VALUE "LegalCopyright", "Copyright (C) 2022"
+            VALUE "OriginalFilename", "FtpAdminGUI"
+            VALUE "ProductName", "UplusFtp Server"
+            VALUE "ProductVersion", "2.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200, 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ftpadmingui"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Welcome to use UplusFtp Server, any question please mail to uplusware@gmail.com"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SERVICE_START        "Start the Ftp Service\nStart"
+    ID_BASIC_SETTING        "Set the basic configration\nBasic Setting"
+    ID_SERVICE_STOP         "Stop the Ftp Service\nStop"
+    ID_NT_SERVICE_MODE      "Enable/Disable NT Service Mode\nNT Service Mode"
+    ID_ADMIN_ACCOUNTID      "Administrate the accountid\nID"
+    ID_ADMIN_POLICY         "Administrate the access policy\nPolicy"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VIEW_FONT_STYLE     "Courier New"
+    IDS_HOST_NAME_TITLE     "LOCALHOST NAME:"
+    IDS_HOST_IP_TITLE       "LOCALHOST   IP:"
+    IDS_FTP_PORT_TITLE      "      FTP PORT:"
+    IDS_WEB_PORT_TITLE      "      WEB PORT:"
+    IDS_MAX_CONN_TITLE      "  MAX SIM CONN:"
+    IDS_CURR_CONN_TITLE     "  CURRENT CONN:"
+    IDS_RUN_FOR_TITLE       "   HAS RUN FOR:"
+    IDS_SERVICE_STOP_TITLE  "UplusFtp Service is stoped"
+    IDS_MSGBOX_SAVE_SETTINGS "Save Settings"
+    IDS_MSGBOX_FTP_PORT_EMPTY "FTP port can not be empty"
+    IDS_MSGBOX_WEB_PORT_EMPTY "Web port can not be empty"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_MAX_CONN_EMPTY "Max Simultaneous Connection can not be empty"
+    IDS_MSGBOX_SAVE_USER    "User Information"
+    IDS_MSGBOX_USERNAME_EMPTY "Username can not be empty"
+    IDS_MSGBOX_HOME_DIR_EMPTY "Home Directory can not be empty"
+    IDS_MSGBOX_PASSWORD_VERIFY_FAILED 
+                            "Verify Password isn't equal with Password"
+    IDS_MSGBOX_PASSWORD_EMPTY "Password can not be empty"
+    IDS_LABEL_USER_LIST_COLUMN_ID "Username"
+    IDS_LABEL_USER_LIST_COLUMN_DESC "Description"
+    IDS_LABEL_USER_LIST_COLUMN_HOME_FOLDER "Home Folder"
+    IDS_MSGBOX_TITLE_ERROR  "Error - UplusFtp Server"
+    IDS_MSGBOX_ENABLE_NT_SERVICE_TITLE "Register Service"
+    IDS_MSGBOX_ENABLE_NT_SERVICE "Sure to register to NT Service?"
+    IDS_MSGBOX_DISABLE_NT_SERVICE_TITLE "Unregister Service"
+    IDS_MSGBOX_DISABLE_NT_SERVICE "Sure to unregister from NT Service?"
+    IDS_MSGBOX_SAVE_BASIC_SETTING_TITLE "Basic Settings"
+    IDS_MSGBOX_SAVE_BASIC_SETTING 
+                            "Settings has been changed, sure to save it and restart the service?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_SAVE_POLICY_TITLE "Policy"
+    IDS_MSGBOX_SAVE_POLICY  "Policy has been changed, save it?"
+    IDS_MSGBOX_RESTART_SERVICE_TITLE "Restart Service"
+    IDS_MSGBOX_LOAD_CONFIG_CONFIRM "Restart service to load new settings?"
+    IDS_MSGBOX_START_SERVICE_TITLE "Start Service"
+    IDS_MSGBOX_START_SERVICE_FAILED "Start service failed"
+    IDS_MSGBOX_STOP_SERVICE_TITLE "Stop Service"
+    IDS_MSGBOX_STOP_SERVICE_FAILED "Stop service failed"
+    IDS_MSGBOX_INATLL_SERVICE_TITLE "Install Service"
+    IDS_MSGBOX_INATLL_SERVICE_FAILED "Install service failed"
+    IDS_MSGBOX_REGISTE_SERVICE_FAILED 
+                            "Register service to Windows System failed"
+    IDS_MSGBOX_REGISTE_SERVICE_OK 
+                            "Register service to Windows System successfully"
+    IDS_MSGBOX_REGISTE_SERVICE_TITLE "Register Service"
+    IDS_MSGBOX_UNREGISTER_SERVICE_TITLE "Unregister Service"
+    IDS_MSGBOX_UNREGISTER_SERVICE_FAILED "Unregister service failed"
+    IDS_MSGBOX_UNREGISTER_SERVICE_OK "Unregister service successfully"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MSGBOX_IP_EXIST     "The IP already exists"
+    IDS_MSGBOX_SEL_RECORD_ALERT "Please select a record"
+    IDS_MSGBOX_USER_EXIST   "User already exists"
+    IDS_MSGBOX_SEL_USER_MODIFY "Please select the user to modify"
+    IDS_MSGBOX_SEL_USER_REMOVE "Please select the user to remove"
+    IDS_MSGBOX_REMOVE_USER_CONFIRM "Sure to remove the user?"
+    IDS_MSGBOX_REMOVE_USER_TITLE "Remove User"
+    IDS_MSGBOX_GET_FOLDER_FAILED "Get directory failed"
+    IDS_WEB_CHANGE_PWD      "Password"
+    IDS_WEB_NEW_PWD         "New Password"
+    IDS_WEB_VERIFY_PWD      "Verify Password"
+    IDS_WEB_BTN_VALUE_UPDATE "Update"
+    IDS_WEB_PASSWORD_ALERT_EMPTY "Password can not be empty"
+    IDS_WEB_PASSWORD_ALERT_VERIFY "Password and verify password are not same"
+    IDS_WEB_LIST_FILES      "Folders and Files"
+    IDS_WEB_PASSWORD_UPDATE_SUCCESFULLY "Update Successfully"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
